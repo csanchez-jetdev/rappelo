@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #eef2f3;
+  --color-card: #ffffff;
+  --color-ink: #16232c;
+  --color-sub: #5c6b75;
+  --color-rail: #e1e7ea;
+  --color-wait: #de8a2c; /* en attente */
+  --color-ready: #1f9d82; /* prêt */
+  --color-line: #dce3e6;
+  --color-field: #f7f9fa;
+
+  --shadow-card: 0 1px 2px rgba(22, 35, 44, 0.06), 0 6px 18px rgba(22, 35, 44, 0.05);
+  --shadow-panel: 0 1px 2px rgba(22, 35, 44, 0.06);
+}
