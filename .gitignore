@@ -444,3 +444,6 @@ infra/
 
 # Browser automation captures and traces
 .playwright-mcp/
+
+# Contexte de build Docker : il n' existe plus de Dockerfile ici
+.dockerignore
