@@ -7,7 +7,7 @@
 
 Un aide-mémoire de prise de médicaments, simple et privé : plus besoin de se souvenir de l'heure de la dernière prise, ni de calculer à la main le prochain créneau autorisé.
 
-Application web légère, 100 % locale : aucune donnée n'est envoyée à un serveur, tout reste dans le `localStorage` du navigateur.
+Application web légère : la liste des médicaments vit dans le `localStorage` du navigateur et n'est envoyée à aucun serveur. L'instance publique mesure sa fréquentation avec une instance [Rybbit](https://rybbit.io/) auto-hébergée, sans cookie, sans adresse IP et sans rejeu de session — seule la page consultée remonte, jamais ce qu'elle contient. Un build sans `NUXT_PUBLIC_RYBBIT_SITE_ID` n'injecte aucun script.
 
 ## Aperçu
 
@@ -58,7 +58,10 @@ L'application est disponible sur [http://localhost:3000](http://localhost:3000).
 ```
 app/
 ├── app.vue                   # Point d'entrée, monte <NuxtPage />
-├── pages/index.vue           # Page principale
+├── error.vue                 # Page d'erreur (404 et erreurs serveur)
+├── pages/
+│   ├── index.vue             # Accueil : principe, avertissement, lien vers l'app
+│   └── app.vue               # L'aide-mémoire lui-même
 ├── components/
 │   ├── MedCard.vue           # Carte d'un médicament actif (anneau, édition, actions)
 │   ├── ArchivedMedCard.vue   # Carte d'un médicament archivé

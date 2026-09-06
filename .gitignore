@@ -435,3 +435,12 @@ skills-lock.json
 # END — Last updated: 2026-03-27
 # Missing a tool? Open a PR: https://github.com/Fellowship-dev/agents-gitignore
 # =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Deployment: host-specific, holds personal settings
+# -----------------------------------------------------------------------------
+infra/
+
+# Browser automation captures and traces
+.playwright-mcp/

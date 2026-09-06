@@ -1,0 +1,6 @@
+# Liste blanche : tout est exclu, seul .output/ part vers le démon.
+# Sans ce fichier, node_modules (plusieurs centaines de Mo) serait envoyé
+# comme contexte de build à chaque `docker compose build`.
+*
+!.output
+!infra
